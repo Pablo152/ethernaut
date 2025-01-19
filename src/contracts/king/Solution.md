@@ -1,6 +1,8 @@
 # King
 
-Wasted so much time on this because there was something wrong with the deployed contract in Ethernaut, I just had to re-deploy the level :/
+Wasted a couple of hours on this because my original Regicide contract was using send() instead of call().
+
+transfer() or send() will fial because of the limited 2300 gas. receive() of the King contract requires more than 2300 gas to execute successfully.
 
 King.sol:
 ```sol
